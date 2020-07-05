@@ -17,17 +17,17 @@ String respuesta = "";
 
 if(request.getParameter("senal")!=null){
         
-          id = request.getParameter("id");
-nombre = request.getParameter("nombre");
-apellido = request.getParameter("apellido");
-correo = request.getParameter("correo");
-usuario = request.getParameter("usuario");
-clave = request.getParameter("clave");
-tipo = request.getParameter("tipo");
-estado = request.getParameter("estado");
-pregunta = request.getParameter("pregunta");
-respuesta = request.getParameter("respuesta");
-fecha_registro = request.getParameter("fecha_registro");
+          id = request.getParameter("ids");
+nombre = request.getParameter("nombres");
+apellido = request.getParameter("apellidos");
+correo = request.getParameter("correos");
+usuario = request.getParameter("usuarios");
+clave = request.getParameter("claves");
+tipo = request.getParameter("tipos");
+estado = request.getParameter("estados");
+pregunta = request.getParameter("preguntas");
+respuesta = request.getParameter("respuestas");
+fecha_registro = request.getParameter("fecha_registros");
 
 }else{
 

@@ -64,17 +64,17 @@ public class Usuario extends HttpServlet {
         } else if (parametro.equals("modificar")) {
 
 
-            int id = Integer.parseInt(request.getParameter("id"));
-            String nombre = request.getParameter("nombre");
-            String apellido = request.getParameter("apellido");
-            float correo = Float.parseFloat(request.getParameter("correo"));
-            String usuario = request.getParameter("usuario");
-            int clave = Integer.parseInt(request.getParameter("clave"));
-            int tipo = Integer.parseInt(request.getParameter("tipo"));
-            float estado = Float.parseFloat(request.getParameter("estado"));
-            String pregunta = request.getParameter("pregunta");
-            String respuesta = request.getParameter("respuesta");
-            String fecha_registro = request.getParameter("fecha_registro");
+            int id = Integer.parseInt(request.getParameter("idu"));
+            String nombre = request.getParameter("nombreu");
+            String apellido = request.getParameter("apellidou");
+            String correo = request.getParameter("correou");
+            String usuario = request.getParameter("usuariou");
+            String clave = request.getParameter("claveu");
+            int tipo = Integer.parseInt(request.getParameter("tipou"));
+            float estado = Float.parseFloat(request.getParameter("estadou"));
+            String pregunta = request.getParameter("preguntau");
+            String respuesta = request.getParameter("respuestu");
+            String fecha_registro = request.getParameter("fecha_registrou");
 
             String pagina = "/Vistas-Usuario/crearUsuario.jsp?id=" + id + "&&nombre=" + nombre + "&&apellido=" + apellido + "&&correo=" + correo + "&&usuario=" + usuario + "&&clave=" + clave + "&&tipo=" + tipo  + "&&estado=" + estado + "&&pregunta=" + pregunta  + "&&respuesta=" + respuesta +  "&&fecha_registro=" + fecha_registro + "&&senal=1";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
@@ -99,8 +99,8 @@ public class Usuario extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String nombre = request.getParameter("txtnombre");
         String apellido = request.getParameter("txtApellido");
-        float correo = Float.parseFloat(request.getParameter("txtcorreo"));
-        float usuario = Float.parseFloat(request.getParameter("txtusuario"));
+        String correo = request.getParameter("txtcorreo");
+        String usuario = request.getParameter("txtusuario");
         String clave = request.getParameter("txtclave");
         int tipo = Integer.parseInt(request.getParameter("txttipo"));
         int estado= Integer.parseInt(request.getParameter("txtestado"));
