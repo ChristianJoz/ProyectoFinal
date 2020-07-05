@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>   
+    
     <servlet>
         <servlet-name>Index</servlet-name>
         <servlet-class>Controller.Index</servlet-class>
@@ -17,8 +21,8 @@
         <servlet-class>Controller.Usuario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SERVLOGIN</servlet-name>
-        <servlet-class>servlets.SERVLOGIN</servlet-class>
+        <servlet-name>InicioSesion</servlet-name>
+        <servlet-class>servlets.InicioSesion</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
@@ -37,8 +41,8 @@
         <url-pattern>/Usuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SERVLOGIN</servlet-name>
-        <url-pattern>/SERVLOGIN</url-pattern>
+        <servlet-name>InicioSesion</servlet-name>
+        <url-pattern>/iniciar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
