@@ -17,17 +17,17 @@ String respuesta = "";
 
 if(request.getParameter("senal")!=null){
         
-          id = request.getParameter("ids");
-nombre = request.getParameter("nombres");
-apellido = request.getParameter("apellidos");
-correo = request.getParameter("correos");
-usuario = request.getParameter("usuarios");
-clave = request.getParameter("claves");
-tipo = request.getParameter("tipos");
-estado = request.getParameter("estados");
-pregunta = request.getParameter("preguntas");
-respuesta = request.getParameter("respuestas");
-fecha_registro = request.getParameter("fecha_registros");
+          id = request.getParameter("idu");
+nombre = request.getParameter("nombreu");
+apellido = request.getParameter("apellidou");
+correo = request.getParameter("correou");
+usuario = request.getParameter("usuariou");
+clave = request.getParameter("claveu");
+tipo = request.getParameter("tipou");
+estado = request.getParameter("estadou");
+pregunta = request.getParameter("preguntau");
+respuesta = request.getParameter("respuestau");
+fecha_registro = request.getParameter("fecha_registrou");
 
 }else{
 
@@ -56,19 +56,19 @@ pregunta = Usuario.getFecha_registro();
         
                  
         <form class="form-horizontal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath() %>/Usuario" method="post">
-        <input type="hidden" name="id_categoria" value="<%= id %>" >
+        <input type="hidden" name="id" value="<%= id %>" >
             
         <div class="form-group">
             <label for="txtNomUsuario" class="col-sm-2 control-label">Nombre:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtNomUsuario" value="<%= nombre %>" required>
+                <input type="text" class="form-control" name="txtnombre" value="<%= nombre %>" required>
             </div>
         </div>
             
         <div class="form-group">
             <label for="txtApellUsuario" class="col-sm-2 control-label">Apellido:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtApellUsuario" value="<%= apellido %>" required>
+                <input type="text" class="form-control" name="txtApellido" value="<%= apellido %>" required>
             </div>
         </div>
                 
@@ -78,62 +78,62 @@ pregunta = Usuario.getFecha_registro();
         <div class="form-group">
             <label for="txtcorrUsuario" class="col-sm-2 control-label">Correo:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtcorrUsuario" value="<%= correo %>" required>
+                <input type="text" class="form-control" name="txtcorreo" value="<%= correo %>" required>
             </div>
         </div>
                 
         <div class="form-group">
             <label for="txtUsUsuario" class="col-sm-2 control-label">Usuario:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtUsUsuario" value="<%= usuario %>" required>
+                <input type="text" class="form-control" name="txtusuario" value="<%= usuario %>" required>
             </div>
         </div>
                 
         <div class="form-group">
             <label for="txtClaUsuario" class="col-sm-2 control-label">Clave:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtClaUsuario" value="<%= clave %>" required>
+                <input type="text" class="form-control" name="txtclave" value="<%= clave %>" required>
             </div>
         </div>
                 
         <div class="form-group">
             <label for="txtTipUsuario" class="col-sm-2 control-label">Tipo:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtTipUsuario" value="<%= tipo %>" required>
+                <input type="text" class="form-control" name="txttipo" value="<%= tipo %>" required>
             </div>
         </div>
                 
         <div class="form-group">
-            <label for="txtEstUsuario" class="col-sm-2 control-label">Estado:</label>
+            <label for="txtestado" class="col-sm-2 control-label">Estado:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtEstUsuario" value="<%= estado %>" required>
-            </div>
-        </div>
-                
-            
-            
-        <div class="form-group">
-            <label for="txtPreUsuario" class="col-sm-2 control-label">Pregunta:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtPreUsuario" value="<%= pregunta %>" required>
+                <input type="text" class="form-control" name="txtestado" value="<%= estado %>" required>
             </div>
         </div>
                 
             
             
         <div class="form-group">
-            <label for="txtResUsuario" class="col-sm-2 control-label">Respuesta:</label>
+            <label for="txtpregunta" class="col-sm-2 control-label">Pregunta:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtResUsuario" value="<%= respuesta %>" required>
+                <input type="text" class="form-control" name="txtpregunta" value="<%= pregunta %>" required>
+            </div>
+        </div>
+                
+            
+            
+        <div class="form-group">
+            <label for="txtrespuesta" class="col-sm-2 control-label">Respuesta:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="txtrespuesta" value="<%= respuesta %>" required>
             </div>
         </div>
                 
             
             
       <div class="form-group">
-            <label for="txtFechUsuario" class="col-sm-2 control-label">Fecha de registro:</label>
+            <label for="txtFecha" class="col-sm-2 control-label">Fecha de registro:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="txtFechUsuario" value="<%= fecha_registro %>" required>
+                <input type="text" class="form-control" name="txtFecha" value="<%= fecha_registro %>" required>
             </div>
         </div>
                 

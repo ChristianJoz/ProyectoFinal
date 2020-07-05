@@ -53,7 +53,7 @@
                                               <td><%=us.getFecha_registro()%></td>
                                             <td>
                                             <a href="<%= request.getContextPath() %>/Usuario?opcion=modificar&&idu=<%= us.getId()%>&&nombreu=<%= us.getNombre()%>&&apellidou=<%= us.getApellido()%>&&correou=<%= us.getCorreo()%>&&usuariou=<%= us.getUsuario()%>
-                                             &&claveu=<%= us.getClave()%>&&tipou=<%= us.getTipo()%>&&estadou=<%= us.getEstado()%>&&preguntau=<%= us.getPregunta()%>&&respuestu=<%= us.getRespuesta()%>&&fecha_registrou<%= us.getFecha_registro()%>" 
+                                             &&claveu=<%= us.getClave()%>&&tipou=<%= us.getTipo()%>&&estadou=<%= us.getEstado()%>&&preguntau=<%= us.getPregunta()%>&&respuestau=<%= us.getRespuesta()%>&&fecha_registrou=<%= us.getFecha_registro()%>" 
                                             class="btn btn-primary btn-sm glyphicon glyphicon-edit" role="button" name="btnmodi"> Editar</a>   
                                             <a href="<%= request.getContextPath() %>/Usuario?opcion=eliminar&&id=<%= us.getId()%>" class="btn btn-danger btn-sm glyphicon glyphicon-remove" role="button"> Eliminar</a>
                                             </td>

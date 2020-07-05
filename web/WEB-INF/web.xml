@@ -2,8 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <welcome-file-list>
         <welcome-file>Login.jsp</welcome-file>
-    </welcome-file-list>   
-    
+    </welcome-file-list>
     <servlet>
         <servlet-name>Index</servlet-name>
         <servlet-class>Controller.Index</servlet-class>
@@ -18,7 +17,7 @@
     </servlet>
     <servlet>
         <servlet-name>Usuario</servlet-name>
-        <servlet-class>Controller.Usuario</servlet-class>
+        <servlet-class>Controller.Usuarios</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>InicioSesion</servlet-name>

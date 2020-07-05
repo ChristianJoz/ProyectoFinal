@@ -132,7 +132,7 @@ public boolean guardarUsu(Usuario usuario) {
 
          
 
-         miSQL.append("INSERT INTO tb_usuario(`nombre`, `apellido`, `correo`, `usuario`, `clave`, `tipo`, `estado`, `pregunta`, `respuesta`) VALUES ('");
+         miSQL.append("INSERT INTO tb_usuario( nombre, apellido, correo, usuario, clave, tipo, estado, pregunta, respuesta) VALUES ('");
          miSQL.append(usuario.getNombre()+ "','");
          miSQL.append(usuario.getApellido()+"','");
          miSQL.append(usuario.getCorreo()+"','");
@@ -141,8 +141,7 @@ public boolean guardarUsu(Usuario usuario) {
          miSQL .append(usuario.getTipo()+"','");
          miSQL .append(usuario.getEstado()+"','");
           miSQL .append(usuario.getPregunta()+"','");
-           miSQL .append(usuario.getRespuesta()+"','");
-         miSQL.append("')");
+           miSQL .append(usuario.getRespuesta()); miSQL.append("')");
          this.conn.ejecutarSQL(miSQL.toString());
    
          
@@ -155,18 +154,18 @@ public boolean guardarUsu(Usuario usuario) {
          
          StringBuilder miSQL = new StringBuilder();
     
-         miSQL.append("UPDATE tb_usuario SET ");
-         miSQL.append(" `usuario` = '").append(usuario.getNombre());
-         miSQL.append("', `apellido` = '").append(usuario.getApellido());
-         miSQL.append("', `correo` = ").append(usuario.getCorreo());
-         miSQL.append(" , `usuario` = ").append(usuario.getUsuario());
-         miSQL.append(" , `clave` = '").append(usuario.getClave());
-         miSQL.append("', `tipo` = ").append(usuario.getTipo());
-         miSQL.append(", `estado` = ").append(usuario.getEstado());
-         miSQL.append(", `pregunta` = ").append(usuario.getPregunta());
-         miSQL.append(", `respuesta` = ").append(usuario.getRespuesta());
-         miSQL.append(" , `fecha_entrada` = '").append(usuario.getFecha_registro());
-         miSQL.append("' WHERE `id` = ").append(usuario.getId()).append(";");
+         miSQL.append("UPDATE tb_usuario SET id = ").append(usuario.getId());
+         miSQL.append(" nombre = '").append(usuario.getNombre());
+         miSQL.append("', apellido = '").append(usuario.getApellido());
+         miSQL.append("', correo = '").append(usuario.getCorreo());
+         miSQL.append("' , usuario = '").append(usuario.getUsuario());
+         miSQL.append("' , clave = '").append(usuario.getClave());
+         miSQL.append("', tipo = ").append(usuario.getTipo());
+         miSQL.append(", estado = ").append(usuario.getEstado());
+         miSQL.append(", pregunta = '").append(usuario.getPregunta());
+         miSQL.append("', respuesta = '").append(usuario.getRespuesta());
+         miSQL.append("' , fecha_registro = '").append(usuario.getFecha_registro());
+         miSQL.append("' WHERE id = ").append(usuario.getId()).append(";");
          
           
            this.conn.ejecutarSQL(miSQL.toString());

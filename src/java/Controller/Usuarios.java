@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Usuario;
 import DAO.UsuarioDAO;
 import DAO.UsuarioDAOImplementar;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class Usuario extends HttpServlet {
+public class Usuarios extends HttpServlet {
 
      protected void listaUsuarios(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -106,10 +107,23 @@ public class Usuario extends HttpServlet {
         int estado= Integer.parseInt(request.getParameter("txtestado"));
         String pregunta = request.getParameter("txtpregunta");
         String respuesta = request.getParameter("txtrespuesta");
-        String fecha_entrada = request.getParameter("txtFechaProducto");
-
+        String fecha_entrada = request.getParameter("txtFecha");
+         
+        us.setId(id);
+        us.setNombre(nombre);
+        us.setApellido(apellido);
+        us.setCorreo(correo);
+        us.setUsuario(usuario);
+        us.setClave(clave);
+        us.setTipo(tipo);
+        us.setEstado(estado);
+        us.setPregunta(pregunta);
+        us.setRespuesta(respuesta);
+        us.setFecha_registro(fecha_entrada);
+        
         
         UsuarioDAO guardarUsuario = new UsuarioDAOImplementar();
+        guardarUsuario.guardarUsu(us);
 
         this.listaUsuarios(request, response);
 
